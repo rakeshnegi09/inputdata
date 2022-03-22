@@ -1,0 +1,33 @@
+Tamyko amazon server details
+
+slider12@gmx.at
+Therealslider12!
+
+generated for root@localhost: =yij+XPHp3oE
+
+
+
+52.15.50.71
+
+sudo yum install -y httpd
+sudo systemctl start httpd
+sudo systemctl enable httpd
+sudo systemctl is-enabled httpd
+
+sudo amazon-linux-extras install -y php7.4
+sudo yum install php-cli php-xml php-json php-mbstring php-process php-common php-fpm php-zip php-mysqlnd git -y
+php --version
+
+
+sudo yum install https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
+sudo yum install https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
+sudo yum install mysql-community-server
+sudo systemctl enable --now mysqld
+systemctl status mysqld
+sudo mysql_secure_installation -p'yij+XPHp3oE'
+
+Ohio@123 root phpmyadmin
+
+sudo usermod -a -G apache ec2-user
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/install-LAMP.html#install-phpmyadmin-lamp-server-alami

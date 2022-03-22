@@ -1,0 +1,67 @@
+Billing: 26th July- 30th July
+
+Amit: 42:08 (Required 40)
+Ankit: 8:02(Monthly 40)
+Vikas: 33:54 (Required 40)
+Kiran: 36:58 (Required 40)
+UI: 4:31 (Monthly 120)
+
+hours: 125:35
+Amount: $1,815.14
+
+.myCompColInner .compThumbCol {
+   		max-height:400px !important;
+}
+
+https://www.business.com/articles/create-share-buttons/
+
+<div class="td-post-featured-image">
+	<?php
+	$img_Url = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()) );
+	$img_Url_mobile = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()),'medium' );
+	//print_r($img_Url_mobile);
+	$useragent=$_SERVER['HTTP_USER_AGENT'];
+	if(wp_is_mobile()){
+	?>
+	<div class="td-post-featured-image">
+		 <img class="entry-thumb  td-animation-stack-type0-2" src="<?php echo $img_Url_mobile[0];?>">
+		
+	</div>braden.ns.cloudflare.com
+	<?php } else { ?>
+	
+	
+	<div class="td-post-featured-image">
+		 <img class="entry-thumb  td-animation-stack-type0-2" src="<?php echo $img_Url;?>">
+		
+	</div>
+	<?php } ?>
+</div>
+
+curl http://cupid.dierenbeschermingcuracao.com/shelterAPI >/dev/null 2>&1
+wget https://www.dierenbeschermingcuracao.com/cupid/Sheltermanager/getAnimal
+a.trovaprezzi_anchor.mobilelink {
+    display: none !important;
+}
+
+if(wp_is_mobile()){
+	$url = $offer_url_amazon;
+}
+
+.compThumbHead {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: auto!important;
+    padding-bottom: 0;
+}
+
+@media (max-width: 767px){
+	.compThumbHead {
+    display: block;
+    height: auto!important;
+    padding-bottom: 0;
+}
+}
+
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css&family=woff2&display=swap">

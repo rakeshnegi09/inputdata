@@ -1,0 +1,43 @@
+[dynamichidden product-id "CF7_get_post_var key='ID'"]
+[dynamichidden product-id "CF7_get_post_var key='ID'"]
+
+
+
+add_action( 'wpcf7_before_send_mail', 'wpcf7_add_text_to_mail_body', 10, 3 );;
+
+function wpcf7_add_text_to_mail_body($contact_form, $abort, $submission){
+  $form_id = $contact_form->id();
+ if ($form_id == 4189 || $form_id == 4187): // 123 => Your Form ID.
+     $values_list = $_POST['valsitems'];
+     $values_str = implode(", ", $values_list);
+	
+	$product_id = $_POST['product-id'];
+	
+	if ( ( $product_id > 0 ) && is_numeric( $product_id ) ) {
+		// Create a product object...
+		$product = wc_get_product( $product_id );
+		$get_permalink = get_permalink( $product_id);
+		// checking that the ID is a valid product...
+		if ( is_object( $product ) ) {
+			// then get the product image url.
+			$product_image_url = wp_get_attachment_image_src( $product->get_image_id(), 'large' )[ 0 ];
+			if ( $product_image_url ) {
+				$data_image = "<p style='margin-top:3%'><a href='".$get_permalink."'><img width='300px' height='300px' src='".$product_image_url."'></a></p>";
+				
+			}
+		}
+	}
+	
+	// get mail property
+	$mail = $contact_form->prop( 'mail' ); // returns array 
+
+	// add content to email body
+	$mail['body'] .= $data_image;
+	$mail['body'] .= $values_list;
+
+
+     // set mail property with changed value(s)
+     $contact_form->set_properties( array( 'mail' => $mail ) );
+ endif;
+
+}

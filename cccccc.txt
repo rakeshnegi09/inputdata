@@ -1,0 +1,7 @@
+'hostname' => 'localhost',
+
+	'username' => 'limpoish_portal2',
+
+	'password' => '&,{uE-Du&?cR',
+
+	'database' => 'limpoish_portal_new',
